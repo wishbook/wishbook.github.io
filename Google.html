@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>亿枝红杏</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+<div id="mydiv" style="width:100%;">
+    <form style="width:100%;" id="myForm" action="https://www.justhideme.net/index.php" method="post">
+            <input style="width:100%;height:100px;" id="url" name="url" type="text" value="https://www.google.com/m"/>
+            <input style="width:100%;height:100px;" type="submit" value="访问" />
+    </form>
+    <br/>
+<button onclick="dj('');">清空网址</button>&nbsp;
+<button onclick="dj('https://zh.wikipedia.org/wiki/中华人民共和国被封锁网站列表');">被墙网站列表</button>&nbsp;
+<button onclick="dj('https://fanqiangzhe.com/');">翻墙者导航</button>&nbsp;
+<button onclick="dj('https://www.ifanqiang.com/');">爱翻墙导航</button>&nbsp;
+<button onclick="dj('https://zh.wikisource.org/wiki/');">维基文库</button>&nbsp;
+<button onclick="dj('https://zh.wikiquote.org/wiki/');">维基语录</button>&nbsp;
+<button onclick="dj('https://zh.wikipedia.org/wiki/');">维基百科</button>&nbsp;
+<button onclick="dj('https://zh.m.wikihow.com/');">维基方法</button>&nbsp;
+<button onclick="dj('https://translate.google.com/m/translate');">谷歌翻译</button>&nbsp;
+<button onclick="dj('https://www.google.com/m');">谷歌搜索</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/videos');">郭文贵爆料</button>&nbsp;
+<button onclick="dj('https://www.guo.media/');">郭媒体官网</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/channel/UCLXvE-XNRIs7_GzEsEmMiRw/videos');">全民共振</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/channel/UC2QpdWej8WRwJZiyIUr0W6A/videos');">建民论推墙</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA/videos');">文昭談古論今</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/videos');">路德访谈</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/channel/UCyDCC5CcIqMqBbzMVENoKVQ/videos');">赵岩直播</button>&nbsp;
+<button onclick="dj('https://m.youtube.com/user/minzhuparty/videos');">郭寶勝政論</button>&nbsp;
+<button onclick="dj('https://www.youtube.com/channel/UCwb7avxK-L5vPjMC1ZIGayw/videos');">陳破空縱論天下</button>&nbsp;
+<button onclick="dj('https://www.youtube.com/user/brotherdotnet/videos');">洪寬推牆</button>&nbsp;
+<button onclick="dj('https://www.youtube.com/user/caochangqing/videos');">長青論壇</button>&nbsp;
+<button onclick="dj('https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos');">德国自干五</button>&nbsp;
+<button onclick="dj('https://www.youtube.com/user/tanglung4/videos');">唐柏桥</button>&nbsp;
+<button onclick="dj('https://www.youtube.com/channel/UCGKCk1yZM4kTW9qSDmwos-Q/videos');">蝴蝶视点</button>&nbsp;
+</div>
+<script type="text/javascript">
+    document.getElementsByName("url")[0].focus();
+    function dj(url){
+            document.getElementById('url').value = url;
+    }
+</script>
+<script type="text/javascript">
+  function copyToClipboard(text) {
+    var copyText = document.getElementById("myInput");
+  
+    /* Select the text field */
+    copyText.select();
+  
+    /* Copy the text inside the text field */
+    document.execCommand("Copy");
+  
+    /* Alert the copied text */
+    alert("Copied!");
+  }
+
+  //手机端判断各个平台浏览器及操作系统平台
+  function checkPlatform(){
+    var namne;
+    if(/android/i.test(navigator.userAgent)){
+    //document.write("This is Android'browser.");//这是Android平台下浏览器
+    }
+    if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
+    //document.write("This is iOS'browser.");//这是iOS平台下浏览器
+    }
+    if(/Linux/i.test(navigator.userAgent)){
+    //document.write("This is Linux'browser.");//这是Linux平台下浏览器
+    }
+    if(/Linux/i.test(navigator.platform)){
+    //document.write("This is Linux operating system.");//这是Linux操作系统平台
+    }
+    if(/micromessenger/i.test(navigator.userAgent.toLowerCase())){
+		writewarn("微信");
+    }
+    if(/qq/i.test(navigator.userAgent.toLowerCase())){
+		writewarn("QQ");
+    }
+  }
+  function writewarn(name){
+    document.getElementById("mydiv").innerHTML="请选择其他浏览器打开";//这是微信平台下浏览器
+  }
+  checkPlatform();
+</script>
+</body>
+</html>
