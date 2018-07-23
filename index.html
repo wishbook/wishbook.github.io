@@ -4,144 +4,35 @@
 <title>自由搜索</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<style>
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-}
-</style>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-<script>
-var pressTimer,currHref;
-$(document).ready(function(){
-    $("a").mouseup(function(){
-      clearTimeout(pressTimer);// Clear timeout
-      return false;
-    }).mousedown(function(){
-      currHref=$(this).attr('href');
-      // Set timeout
-      pressTimer = window.setTimeout(function() {dj(currHref);},0);
-      return false; 
-    });
-});
-</script>
-</head>
-<body>
-<div id="mydiv" align="center" style="width:100%;">
-    <!--
-    <form style="width:100%;" target="_blank" id="myForm" action="http://fuckgong.tk/ppp.php" method="post">
-        <input style="width:100%;height:61px;border:1px;padding:4px;margin:-5px;" id="url" name="url" type="text" value="https://www.google.com/m"/>
-        <input style="width:100%;height:50px;" type="submit" value="访问" />
-    </form>
-    -->
-    <form style="width:100%;" target="_blank" id="myForm" action="http://proxyserver.nz/index.php" method="post">
-        <input id="url" name="url" type="text" style="width:100%;height:61px;border:1px;padding:4px;margin:-5px;" autocomplete="off"  value="https://www.google.com/m" placeholder="http://">
-        <input style="width:100%;height:50px;" type="submit" value="访问">
-    </form>
-    <table border='0' style='margin:0px;width:100%;margin:0px;'>
-    <tr align="center"><td><font size="1" face="verdana" color="black">爆料</font></td>
-        <td><font size="1" face="verdana" color="black">自媒体</font></td>
-        <td><font size="1" face="verdana" color="black">评论员</font></td>
-        <td><font size="1" face="verdana" color="black">新媒体</font></td>
-        <td><font size="1" face="verdana" color="black">工具</font></td>
-    </tr>
-    <td valign="top">
-             <a href="javascript:void(0);" onclick="tj('https://www.youtube.com/watch?v=nDasNYKPo14');"><font size="1" face="verdana" color="red">07.17爆料</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/videos');"><font size="1" face="verdana" color="black">郭文贵爆料</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.guo.media/');"><font size="1" face="verdana" color="black">郭媒体官网</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/caochangqing/videos');"><font size="1" face="verdana" color="black">長青論壇</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g/videos');"><font size="1" face="verdana" color="black">南十字星</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/videos');"><font size="1" face="verdana" color="black">路德访谈</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCyDCC5CcIqMqBbzMVENoKVQ/videos');"><font size="1" face="verdana" color="black">赵岩直播</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCSZyTsNd7ap1Vx5k9giXWXA/videos');"><font size="1" face="verdana" color="black">巴黎张健</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC66D8Bl3TeNTgyUAG-mcwHg/videos');"><font size="1" face="verdana" color="black">澳洲新声</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCXRW8TZMpe5Iaf7UsvKwAvg/videos');"><font size="1" face="verdana" color="black">政事小哥</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC2VwgzDzUNvfRDqQ6LJxTXA/videos');"><font size="1" face="verdana" color="black">WP.S.平论</font></a>
-    </td>
-    <td valign="top">
-             <a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCLXvE-XNRIs7_GzEsEmMiRw/videos');"><font size="1" face="verdana" color="black">全民共振</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UC2QpdWej8WRwJZiyIUr0W6A/videos');"><font size="1" face="verdana" color="black">建民论推墙</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCUEwfKAQj359gIiB-WiQIZQ/videos');"><font size="1" face="verdana" color="black">华涌H.Y.</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/brotherdotnet/videos');"><font size="1" face="verdana" color="black">洪寬推牆</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/tanglung4/videos');"><font size="1" face="verdana" color="black">唐柏桥</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/user/minzhuparty/videos');"><font size="1" face="verdana" color="black">郭寶勝政論</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCbLqKEvQGiTnpl8tCKulZAQ/videos');"><font size="1" face="verdana" color="black">东京相林</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCGpW4aY5cul_vzMHcM9nrSQ/videos');"><font size="1" face="verdana" color="black">Qing Pan</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCGKCk1yZM4kTW9qSDmwos-Q/videos');"><font size="1" face="verdana" color="black">蝴蝶视点</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCkHvF7S9qpBudjVvrjqz-8g/videos');"><font size="1" face="verdana" color="black">..夏業良</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCJMO7SgQdmLziKr_eJwtUFw/videos');"><font size="1" face="verdana" color="black">国际盲流子</font></a>
-    </td>
-    <td valign="top">
-             <a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA/videos');"><font size="1" face="verdana" color="black">文昭談古論今</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCwb7avxK-L5vPjMC1ZIGayw/videos');"><font size="1" face="verdana" color="black">陳破空縱論..</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/watch?v=Au0dqbvsOF4&list=PL81pOstN1JRDNWvw92BGWzJZG-42MbpBA');"><font size="1" face="verdana" color="black">一周龙珠汇</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos');"><font size="1" face="verdana" color="black">德国老雷</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/Laowaikanzhongguo/videos');"><font size="1" face="verdana" color="black">老外看中國</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCkWfzJTG5j-V8gTJQgEOexA/videos');"><font size="1" face="verdana" color="black">小民之心</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCFYpTQEVykoFV5KSxc91aEg/videos');"><font size="1" face="verdana" color="black">江森哲</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCLGc06neR5yyiIRnWScfoRA/videos');"><font size="1" face="verdana" color="black">姜维平</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UChRE0pMeij_O5FqWrSKBF-Q/videos');"><font size="1" face="verdana" color="black">書齋夜話</font></a>
-    </td>
-    <td valign="top">
-             <a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/VOAchina/videos');"><font size="1" face="verdana" color="black">美国之音中文</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/RFACHINESE/videos');"><font size="1" face="verdana" color="black">自由亚洲电台</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/NTDCHINESE/videos');"><font size="1" face="verdana" color="black">新唐人电视台</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCiwt1aanVMoPYUt_CQYCPQg/videos');"><font size="1" face="verdana" color="black">文茜世界周報</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCu0wl7cMGgBRR6av6UlmSYg/videos');"><font size="1" face="verdana" color="black">明镜新闻台</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCcyq3Dtsa-EbuIfwViWbT4Q/videos');"><font size="1" face="verdana" color="black">万维TV</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ/videos');"><font size="1" face="verdana" color="black">政事直播</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/NTDChinaUncensored/videos');"><font size="1" face="verdana" color="black">NTDC.U.</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCHAVHbV2Xan9029VEhT-8iQ/videos');"><font size="1" face="verdana" color="black">凤凰视频</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCdKyM0XmuvQrD0o5TNhUtkQ/videos');"><font size="1" face="verdana" color="black">明鏡火拍</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/boxunvideo/videos');"><font size="1" face="verdana" color="black">博讯直击</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCcKRae8C9DaCtR59L5LjkHA/videos');"><font size="1" face="verdana" color="black">ACM盟传媒</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC3lyWHqUY9IiP4en5jnY6vA/videos');"><font size="1" face="verdana" color="black">明鏡電視</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC-r3nO3oGqfbpDYPTTXuwsQ/videos');"><font size="1" face="verdana" color="black">博闻社</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC2ph-c4b5JnXVkNeU_5_Xrg/videos');"><font size="1" face="verdana" color="black">自由中国之声</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCjq1mBz2drBt49ExUaCLXZA/videos');"><font size="1" face="verdana" color="black">灯传媒</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/leadtheway4usarmy/videos');"><font size="1" face="verdana" color="black">零点时刻</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC-ayKOXvIcatt5VocwTrU9Q/videos');"><font size="1" face="verdana" color="black">洛杉矶华人..</font></a>
-    </td>
-    <td valign="top">
-             <a href="javascript:void(0);" onclick="dj('');"><font size="1" face="verdana" color="black">清空网址</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://cn.nytimes.com/');"><font size="1" face="verdana" color="black">纽约时报</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://cn.wsj.com/');"><font size="1" face="verdana" color="black">华尔街日报</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://m.dw.com/zh/');"><font size="1" face="verdana" color="black">德国之声</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.bbc.com/zhongwen/simp');"><font size="1" face="verdana" color="black">BBC英广</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('http://m.cn.rfi.fr/');"><font size="1" face="verdana" color="black">RFI法广</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/新闻自由指数');"><font size="1" face="verdana" color="black">新闻自由指数</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/中华人民共和国持不同政见者列表');"><font size="1" face="verdana" color="black">异议人士列表</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('http://cppc1989.blogspot.com/');"><font size="1" face="verdana" color="black">政治犯關注</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/中华人民共和国被封锁网站列表');"><font size="1" face="verdana" color="black">被墙网站列表</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://fanqiangzhe.com/');"><font size="1" face="verdana" color="black">翻墙者导航</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.ifanqiang.com/');"><font size="1" face="verdana" color="black">爱翻墙导航</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikisource.org/wiki/');"><font size="1" face="verdana" color="black">维基文库</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikiquote.org/wiki/');"><font size="1" face="verdana" color="black">维基语录</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/');"><font size="1" face="verdana" color="black">维基百科</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://zh.m.wikihow.com/');"><font size="1" face="verdana" color="black">维基方法</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://translate.google.com/m/translate');"><font size="1" face="verdana" color="black">谷歌翻译</font></a>
-        <br/><a href="javascript:void(0);" onclick="tj('https://www.google.com/m');"><font size="1" face="verdana" color="black">谷歌搜索</font></a>
-    </td>
-    </tr>
-    </table>
-    <img src="http://img1.cache.netease.com/catchpic/8/87/8719FFB1013E0B5509AE0E37AFEAE956.jpg" alt="Smiley face" style="width:100%;" onclick="dj('https://www.google.com/m')"/><br/>
-</div>
-<div id="topicdiv" align="center">
-    <a href="http://fuckgong.tk/" target="_blank"><font size="1" face="verdana" color="#29AB87">铲共主义</font></a>&nbsp;
-    <a href="javascript:void(0);" onclick="dj('http://www.nettv.live/');document.forms['myForm'].submit();"><font size="1" face="verdana" color="blue">全球电视直播</font></a>&nbsp;
-    <a href="javascript:void(0);" onclick="dj('http://radio.garden/live/loma-linda-ca/kcaaradio/');document.forms['myForm'].submit();"><font size="1" face="verdana" color="lightblue">全球广播直播</font></a>&nbsp;
-    <a href="http://fuckgong.tk/academy-award-for-best-picture.php" target="_blank"><font size="1" face="verdana" color="#F39C12">#BestPicture</font></a>&nbsp;
-    <a href="http://fuckgong.tk/top-rated-tv-shows.php" target="_blank"><font size="1" face="verdana" color="#F39C12">#TopRatedTVs</font></a>&nbsp;
-    <a href="http://fuckgong.tk/top-rated-movies.php" target="_blank"><font size="1" face="verdana" color="#F39C12">#TopRatedMovies</font></a>&nbsp;
-    <a href="http://fuckgong.tk/food-usa-en.php" target="_blank"><font size="1" face="verdana" color="#bfff00">#Diet</font></a>&nbsp;
-    <a href="http://fuckgong.tk/food-usa-zh-cn.php" target="_blank"><font size="1" face="verdana" color="#bfff00">#饮食</font></a>&nbsp;
-</div>
 <script type="text/javascript">
-    document.getElementsByName("url")[0].focus();
+    var isTBrowser=false;
+    //手机端判断各个平台浏览器及操作系统平台
+    function checkPlatform(){
+      var namne;
+      if(/android/i.test(navigator.userAgent)){
+      //document.write("This is Android'browser.");//这是Android平台下浏览器
+      }
+      if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
+      //document.write("This is iOS'browser.");//这是iOS平台下浏览器
+      }
+      if(/Linux/i.test(navigator.userAgent)){
+      //document.write("This is Linux'browser.");//这是Linux平台下浏览器
+      }
+      if(/Linux/i.test(navigator.platform)){
+      //document.write("This is Linux operating system.");//这是Linux操作系统平台
+      }
+      if(/micromessenger/i.test(navigator.userAgent.toLowerCase())){
+            //writewarn("微信");
+            isTBrowser=true;
+      }
+      if(/qq/i.test(navigator.userAgent.toLowerCase())){
+            //writewarn("QQ");
+            isTBrowser=true;
+      }
+    }
+    checkPlatform();
+    //document.getElementsByName("url")[0].focus();
     function dj(url){
         document.getElementById('url').value = url;
     }
@@ -149,48 +40,145 @@ $(document).ready(function(){
         document.getElementById('url').value = url;
         document.forms['myForm'].submit();
     }
-</script>
-<script type="text/javascript">
-  function copyToClipboard(text) {
-    var copyText = document.getElementById("myInput");
-  
-    /* Select the text field */
-    copyText.select();
-  
-    /* Copy the text inside the text field */
-    document.execCommand("Copy");
-  
-    /* Alert the copied text */
-    alert("Copied!");
-  }
+    function copyToClipboard(text) {
+      var copyText = document.getElementById("myInput");
 
-  //手机端判断各个平台浏览器及操作系统平台
-  function checkPlatform(){
-    var namne;
-    if(/android/i.test(navigator.userAgent)){
-    //document.write("This is Android'browser.");//这是Android平台下浏览器
+      /* Select the text field */
+      copyText.select();
+
+      /* Copy the text inside the text field */
+      document.execCommand("Copy");
+
+      /* Alert the copied text */
+      alert("Copied!");
     }
-    if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
-    //document.write("This is iOS'browser.");//这是iOS平台下浏览器
-    }
-    if(/Linux/i.test(navigator.userAgent)){
-    //document.write("This is Linux'browser.");//这是Linux平台下浏览器
-    }
-    if(/Linux/i.test(navigator.platform)){
-    //document.write("This is Linux operating system.");//这是Linux操作系统平台
-    }
-    if(/micromessenger/i.test(navigator.userAgent.toLowerCase())){
-		writewarn("微信");
-    }
-    if(/qq/i.test(navigator.userAgent.toLowerCase())){
-		writewarn("QQ");
-    }
-  }
-  function writewarn(name){
-    document.getElementById("mydiv").innerHTML="<div align='center'>请选择其他浏览器打开</div><img src=\"http://img1.cache.netease.com/catchpic/8/87/8719FFB1013E0B5509AE0E37AFEAE956.jpg\" style=\"width:100%;\"/>";//这是微信平台下浏览器
-    document.getElementById('topicdiv').style.display = 'none';
-  }
-  checkPlatform();
+    var pressTimer,currHref;
+    $(document).ready(function(){
+        if(isTBrowser){
+            $('#warndiv').show();
+            $('#maindiv').hide();
+            $('#footdiv').hide();
+        }else{
+            $('#warndiv').hide();
+            $('#maindiv').show();
+            $('#footdiv').show();
+        }
+    });
 </script>
+</head>
+<body>
+    <div id="warndiv" align="right" style="display:none;width:100%;">
+        选择其他浏览器打开<font size="7">☝</font><br/>
+        <img src="http://img1.cache.netease.com/catchpic/8/87/8719FFB1013E0B5509AE0E37AFEAE956.jpg" style="width:100%;"/>
+    </div>
+    <div id="maindiv" align="center" style="display:none;width:100%;">
+        <!--
+        <form style="width:100%;" target="_blank" id="myForm" action="http://fuckgong.tk/ppp.php" method="post">
+            <input style="width:100%;height:61px;border:1px;padding:4px;margin:-5px;" id="url" name="url" type="text" value="https://www.google.com/m"/>
+            <input style="width:100%;height:50px;" type="submit" value="访问" />
+        </form>
+        -->
+        <form style="width:100%;" target="_blank" id="myForm" action="http://proxyserver.nz/index.php" method="post">
+            <input id="url" name="url" type="text" style="width:100%;height:61px;border:1px;padding:4px;margin:-5px;" autocomplete="off"  value="https://www.google.com/m" placeholder="http://">
+            <input style="width:100%;height:50px;" type="submit" value="访问">
+        </form>
+        <table border='0' style='margin:0px;width:100%;margin:0px;'>
+            <tr align="center"><td><font size="1" face="verdana" color="black">爆料</font></td>
+                <td><font size="1" face="verdana" color="black">自媒体</font></td>
+                <td><font size="1" face="verdana" color="black">评论员</font></td>
+                <td><font size="1" face="verdana" color="black">新媒体</font></td>
+                <td><font size="1" face="verdana" color="black">工具</font></td>
+            </tr>
+            <td valign="top">
+                     <a href="javascript:void(0);" onclick="tj('https://www.youtube.com/watch?v=nDasNYKPo14');"><font size="1" face="verdana" color="red">07.17爆料</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/videos');"><font size="1" face="verdana" color="black">郭文贵爆料</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.guo.media/');"><font size="1" face="verdana" color="black">郭媒体官网</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/caochangqing/videos');"><font size="1" face="verdana" color="black">長青論壇</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g/videos');"><font size="1" face="verdana" color="black">南十字星</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/videos');"><font size="1" face="verdana" color="black">路德访谈</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCyDCC5CcIqMqBbzMVENoKVQ/videos');"><font size="1" face="verdana" color="black">赵岩直播</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCSZyTsNd7ap1Vx5k9giXWXA/videos');"><font size="1" face="verdana" color="black">巴黎张健</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC66D8Bl3TeNTgyUAG-mcwHg/videos');"><font size="1" face="verdana" color="black">澳洲新声</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCXRW8TZMpe5Iaf7UsvKwAvg/videos');"><font size="1" face="verdana" color="black">政事小哥</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC2VwgzDzUNvfRDqQ6LJxTXA/videos');"><font size="1" face="verdana" color="black">WP.S.平论</font></a>
+            </td>
+            <td valign="top">
+                     <a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCLXvE-XNRIs7_GzEsEmMiRw/videos');"><font size="1" face="verdana" color="black">全民共振</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UC2QpdWej8WRwJZiyIUr0W6A/videos');"><font size="1" face="verdana" color="black">建民论推墙</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCUEwfKAQj359gIiB-WiQIZQ/videos');"><font size="1" face="verdana" color="black">华涌H.Y.</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/brotherdotnet/videos');"><font size="1" face="verdana" color="black">洪寬推牆</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/tanglung4/videos');"><font size="1" face="verdana" color="black">唐柏桥</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://m.youtube.com/user/minzhuparty/videos');"><font size="1" face="verdana" color="black">郭寶勝政論</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCbLqKEvQGiTnpl8tCKulZAQ/videos');"><font size="1" face="verdana" color="black">东京相林</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCGpW4aY5cul_vzMHcM9nrSQ/videos');"><font size="1" face="verdana" color="black">Qing Pan</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCGKCk1yZM4kTW9qSDmwos-Q/videos');"><font size="1" face="verdana" color="black">蝴蝶视点</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCkHvF7S9qpBudjVvrjqz-8g/videos');"><font size="1" face="verdana" color="black">..夏業良</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCJMO7SgQdmLziKr_eJwtUFw/videos');"><font size="1" face="verdana" color="black">国际盲流子</font></a>
+            </td>
+            <td valign="top">
+                     <a href="javascript:void(0);" onclick="tj('https://m.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA/videos');"><font size="1" face="verdana" color="black">文昭談古論今</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCwb7avxK-L5vPjMC1ZIGayw/videos');"><font size="1" face="verdana" color="black">陳破空縱論..</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/watch?v=Au0dqbvsOF4&list=PL81pOstN1JRDNWvw92BGWzJZG-42MbpBA');"><font size="1" face="verdana" color="black">一周龙珠汇</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos');"><font size="1" face="verdana" color="black">德国老雷</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/Laowaikanzhongguo/videos');"><font size="1" face="verdana" color="black">老外看中國</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCkWfzJTG5j-V8gTJQgEOexA/videos');"><font size="1" face="verdana" color="black">小民之心</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCFYpTQEVykoFV5KSxc91aEg/videos');"><font size="1" face="verdana" color="black">江森哲</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCLGc06neR5yyiIRnWScfoRA/videos');"><font size="1" face="verdana" color="black">姜维平</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UChRE0pMeij_O5FqWrSKBF-Q/videos');"><font size="1" face="verdana" color="black">書齋夜話</font></a>
+            </td>
+            <td valign="top">
+                     <a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/VOAchina/videos');"><font size="1" face="verdana" color="black">美国之音中文</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/RFACHINESE/videos');"><font size="1" face="verdana" color="black">自由亚洲电台</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/NTDCHINESE/videos');"><font size="1" face="verdana" color="black">新唐人电视台</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCiwt1aanVMoPYUt_CQYCPQg/videos');"><font size="1" face="verdana" color="black">文茜世界周報</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCu0wl7cMGgBRR6av6UlmSYg/videos');"><font size="1" face="verdana" color="black">明镜新闻台</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCcyq3Dtsa-EbuIfwViWbT4Q/videos');"><font size="1" face="verdana" color="black">万维TV</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ/videos');"><font size="1" face="verdana" color="black">政事直播</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/NTDChinaUncensored/videos');"><font size="1" face="verdana" color="black">NTDC.U.</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCHAVHbV2Xan9029VEhT-8iQ/videos');"><font size="1" face="verdana" color="black">凤凰视频</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCdKyM0XmuvQrD0o5TNhUtkQ/videos');"><font size="1" face="verdana" color="black">明鏡火拍</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/boxunvideo/videos');"><font size="1" face="verdana" color="black">博讯直击</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCcKRae8C9DaCtR59L5LjkHA/videos');"><font size="1" face="verdana" color="black">ACM盟传媒</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC3lyWHqUY9IiP4en5jnY6vA/videos');"><font size="1" face="verdana" color="black">明鏡電視</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC-r3nO3oGqfbpDYPTTXuwsQ/videos');"><font size="1" face="verdana" color="black">博闻社</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC2ph-c4b5JnXVkNeU_5_Xrg/videos');"><font size="1" face="verdana" color="black">自由中国之声</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UCjq1mBz2drBt49ExUaCLXZA/videos');"><font size="1" face="verdana" color="black">灯传媒</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/user/leadtheway4usarmy/videos');"><font size="1" face="verdana" color="black">零点时刻</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.youtube.com/channel/UC-ayKOXvIcatt5VocwTrU9Q/videos');"><font size="1" face="verdana" color="black">洛杉矶华人..</font></a>
+            </td>
+            <td valign="top">
+                     <a href="javascript:void(0);" onclick="dj('');"><font size="1" face="verdana" color="black">清空网址</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://cn.nytimes.com/');"><font size="1" face="verdana" color="black">纽约时报</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://cn.wsj.com/');"><font size="1" face="verdana" color="black">华尔街日报</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://m.dw.com/zh/');"><font size="1" face="verdana" color="black">德国之声</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.bbc.com/zhongwen/simp');"><font size="1" face="verdana" color="black">BBC英广</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('http://m.cn.rfi.fr/');"><font size="1" face="verdana" color="black">RFI法广</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/新闻自由指数');"><font size="1" face="verdana" color="black">新闻自由指数</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/中华人民共和国持不同政见者列表');"><font size="1" face="verdana" color="black">异议人士列表</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('http://cppc1989.blogspot.com/');"><font size="1" face="verdana" color="black">政治犯關注</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/中华人民共和国被封锁网站列表');"><font size="1" face="verdana" color="black">被墙网站列表</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://fanqiangzhe.com/');"><font size="1" face="verdana" color="black">翻墙者导航</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.ifanqiang.com/');"><font size="1" face="verdana" color="black">爱翻墙导航</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikisource.org/wiki/');"><font size="1" face="verdana" color="black">维基文库</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikiquote.org/wiki/');"><font size="1" face="verdana" color="black">维基语录</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.wikipedia.org/wiki/');"><font size="1" face="verdana" color="black">维基百科</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://zh.m.wikihow.com/');"><font size="1" face="verdana" color="black">维基方法</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://translate.google.com/m/translate');"><font size="1" face="verdana" color="black">谷歌翻译</font></a>
+                <br/><a href="javascript:void(0);" onclick="tj('https://www.google.com/m');"><font size="1" face="verdana" color="black">谷歌搜索</font></a>
+            </td>
+            </tr>
+        </table>
+        <img src="http://img1.cache.netease.com/catchpic/8/87/8719FFB1013E0B5509AE0E37AFEAE956.jpg" alt="Smiley face" style="width:100%;" onclick="dj('https://www.google.com/m')"/><br/>
+    </div>
+    <div id="footdiv" align="center" style="display:none;width:100%;">
+        <a href="http://fuckgong.tk/" target="_blank"><font size="1" face="verdana" color="#29AB87">铲共主义</font></a>&nbsp;
+        <a href="javascript:void(0);" onclick="dj('http://www.nettv.live/');document.forms['myForm'].submit();"><font size="1" face="verdana" color="blue">全球电视直播</font></a>&nbsp;
+        <a href="javascript:void(0);" onclick="dj('http://radio.garden/live/loma-linda-ca/kcaaradio/');document.forms['myForm'].submit();"><font size="1" face="verdana" color="lightblue">全球广播直播</font></a>&nbsp;
+        <a href="http://fuckgong.tk/academy-award-for-best-picture.php" target="_blank"><font size="1" face="verdana" color="#F39C12">#BestPicture</font></a>&nbsp;
+        <a href="http://fuckgong.tk/top-rated-tv-shows.php" target="_blank"><font size="1" face="verdana" color="#F39C12">#TopRatedTVs</font></a>&nbsp;
+        <a href="http://fuckgong.tk/top-rated-movies.php" target="_blank"><font size="1" face="verdana" color="#F39C12">#TopRatedMovies</font></a>&nbsp;
+        <a href="http://fuckgong.tk/food-usa-en.php" target="_blank"><font size="1" face="verdana" color="#bfff00">#Diet</font></a>&nbsp;
+        <a href="http://fuckgong.tk/food-usa-zh-cn.php" target="_blank"><font size="1" face="verdana" color="#bfff00">#饮食</font></a>&nbsp;
+    </div>
 </body>
 </html>
