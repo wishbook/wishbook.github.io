@@ -30,7 +30,6 @@
       }
     }
     checkPlatform();
-    //document.getElementsByName("url")[0].focus();
     function dj(url){
         document.getElementById('url').value = url;
     }
@@ -38,19 +37,6 @@
         document.getElementById('url').value = url;
         document.forms['myForm'].submit();
     }
-    function copyToClipboard(text) {
-      var copyText = document.getElementById("myInput");
-
-      /* Select the text field */
-      copyText.select();
-
-      /* Copy the text inside the text field */
-      document.execCommand("Copy");
-
-      /* Alert the copied text */
-      alert("Copied!");
-    }
-    var pressTimer,currHref;
     $(document).ready(function(){
         if(isTBrowser){
             $('#warndiv').show();
