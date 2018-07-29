@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-    var isTBrowser=false;
+    var isTBrowser=false;var a_idx = 0;
     //手机端判断各个平台浏览器及操作系统平台
     function checkPlatform(){
       var namne;
@@ -47,6 +47,30 @@
             $('#maindiv').show();
             $('#footdiv').show();
         }
+        $("body").click(function(e) {
+            var a = new Array("我们信仰上帝", "合众为一", "天佑国事", "旷世新政", "统一", "正义", "自由", "平等", "博爱", "法治", "民主", "真善美");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#ff6651"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
     });
 </script>
 </head>
