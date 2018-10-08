@@ -384,7 +384,7 @@ function initYoutubePlayers(){
     ytplayerList = null; //reset
     ytplayerList = []; //create new array to hold youtube player
     for (var e = document.getElementsByTagName("iframe"), x = e.length; x-- ;) {
-        if (/youtube.com\/embed/.test(e[x].src)) {
+        if (/streamable.com\/s/.test(e[x].src)) {
             ytplayerList.push(initYoutubePlayer(e[x]));
             console.log("create a Youtube player successfully");
         }
@@ -412,10 +412,7 @@ function initYoutubePlayer(ytiframe){
     ytiframe.ytp = ytp;
     return ytp;
 }
-function onYouTubeIframeAPIReady() {
-    console.log("YouTubeIframeAPI is ready");
-    initYoutubePlayers();
-}
+initYoutubePlayers();
 var tag = document.createElement('script');
 //use https when loading script and youtube iframe src since if user is logging in youtube the youtube src will switch to https.
 tag.src = "https://www.youtube.com/iframe_api";
