@@ -63,7 +63,19 @@ video {
         document.forms['myForm'].submit();
     }
     $(document).ready(function(){
+        var times=0;
+        $('#warnimg').click(function(){
+           times=times+1;
+           if(times>13){
+                times=0;
+                $('#warnimg').hide();
+                $('#maindiv').show();
+                $('#footdiv').show();
+                alert("Enough!");
+           }
+        });
         if(isTBrowser){
+            $("#myForm").attr("target", isTBrowser?"_self":"_blank");
             $('#warndiv').show();
             $('#maindiv').hide();
             $('#footdiv').hide();
@@ -116,10 +128,10 @@ video {
 <body>
     <div id="warndiv" align="center" style="display:none;width:100%;">
         <font size="1" color="red">选择其他浏览器打开</font><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png"/><br/>
-        <img src="http://img1.cache.netease.com/catchpic/8/87/8719FFB1013E0B5509AE0E37AFEAE956.jpg" style="width:100%;"/>
+        <img id="warnimg" src="http://img1.cache.netease.com/catchpic/8/87/8719FFB1013E0B5509AE0E37AFEAE956.jpg" style="width:100%;"/>
     </div>
     <div id="maindiv" align="center" style="display:none;width:100%;">
-        <form style="width:100%;" target="_blank" id="myForm" class="form-group" action="http://descsir.axfree.com/pppcom/index.php" method="post">
+        <form style="width:100%;" target="_blank" id="myForm" class="form-group" action="http://descsir.axfree.com/pppcom/index.php?" method="post">
             <span class="text-input-wrapper" style="width:100%;height:50px;"><input id="url" name="url" type="search" style="width:100%;height:61px;border:1px;padding:4px;margin:-5px;" autocomplete="off" placeholder="http://" value="https://www.google.com/m"><span title="Clear">&times;</span></span>
             <input style="width:100%;height:50px;" type="submit" value="访问">
         </form>
