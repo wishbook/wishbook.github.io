@@ -70,7 +70,12 @@ function copyTextToClipboard(text) {
   });
 }
 function donate(){
-	document.getElementById("DONATE").style.display = 'inline';
+  var x = document.getElementById("DONATE");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
     function dj(url){
         document.getElementById('url').value = url;
