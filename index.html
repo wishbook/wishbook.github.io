@@ -615,7 +615,7 @@ var syms = ["BTC", "DOG", "XMR"];
 var adds = ["BTC", "D9dNF6Tg5uEjbcx268dxiSYdE78yma1fqH", "XMR"];
 var brs="";
 for(var i=0; i<adds.length; i++)
-	brs += "<button onclick=\"copyTextToClipboard('"+adds[i]+"');alert('"+adds[i]+"\n"+syms[i]+" adress copied!!!');\">Copy</button>"+adds[i]+"<br/>";
+	brs += "<button onclick=\"copyTextToClipboard('"+adds[i]+"');alert('"+adds[i]+"\r\n"+syms[i]+" adress copied!!!');\">Copy</button>"+adds[i]+"<br/>";
 document.getElementById("DONATE").innerHTML = document.getElementById("DONATE").innerHTML+brs+"<div class=\"top-left\">donate</div>";
 </script>
 </body>
