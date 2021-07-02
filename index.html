@@ -27,7 +27,7 @@ input {font:inherit}
 }
 .donatecontainer {
   position: relative;
-  color: orange;
+  color: #87CEEB;
 }
 .top-left {
   position: absolute;
@@ -669,8 +669,8 @@ document.getElementById("brs").innerHTML = document.getElementById("brs").innerH
 </div>
 <img width="100%" height="240" src="https://forkast.news/wp-content/uploads/2021/04/dogecoin-litecoin-etheteum-and-bitcoin-PS98VLU-scaled.jpg" size="150" alt="?" onclick="donate(this)">
 <script>
-var syms = ["BTC", "DOG", "XMR"];
-var adds = ["1BLUzUkne15AVzz84thuZV7txa3ef84hEV", "D9dNF6Tg5uEjbcx268dxiSYdE78yma1fqH", "XMR"];
+var syms = ["BTC", "XMR"];
+var adds = ["1BLUzUkne15AVzz84thuZV7txa3ef84hEV", "86uiJtFidKp699Wqi9uERA3eTMmH9tiTbjnULfFdXEzqVsWePbyjS3M4mCkb7dotz9VM5dfZG3cskBynptVopoqeReTrM3w"];
 var brs="";
 for(var i=0; i<adds.length; i++)
 	brs += "<button onclick=\"copyTextToClipboard('"+adds[i]+"');alert('"+adds[i]+"\\n"+syms[i]+" adress copied!!!');\">Copy</button>"+adds[i]+"<br/>";
