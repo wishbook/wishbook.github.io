@@ -72,25 +72,25 @@ video {
         var vid=url.substring(23,34);
         ele.parentElement.innerHTML="<iframe width='100%' height='240' src='https://www.youtube.com/embed/"+vid+"?autoplay=1&start="+start+"' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
     }
-function copyTextToClipboard(text) {
-  if (!navigator.clipboard) {
-    fallbackCopyTextToClipboard(text);
-    return;
-  }
-  navigator.clipboard.writeText(text).then(function() {
-    console.log('Async: Copying to clipboard was successful!');
-  }, function(err) {
-    console.error('Async: Could not copy text: ', err);
-  });
-}
-function donate(){
-  var x = document.getElementById("DONATE");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+    function copyTextToClipboard(text) {
+      if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+    }
+    function donate(){
+      var x = document.getElementById("DONATE");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
     function dj(url){
         document.getElementById('url').value = url;
     }
@@ -178,8 +178,6 @@ function donate(){
 	<a target="_blank" href="https://warroom.org/"><img style="width:100%;height:240" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf4cTWVvisC17HB2oyionWnG1QlpNshOAv-w&usqp=CAU"></a>
 	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/AwBXKUhEZqw/maxresdefault.jpg"></div>
 	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-bD_WiU9bRs/maxresdefault.jpg"></div>
-	<iframe width="100%" height="240" src="https://www.youtube.com/embed/AwBXKUhEZqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	<iframe width="100%" height="240" src="https://www.youtube.com/embed/-bD_WiU9bRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<img style="width:100%;height:240" src="https://media.swncdn.com/cms/CW/faith/58093-stairs-heaven-1200.1200w.tn.jpg">
 	<a target="_blank" href="https://www.ttky8.com/vod/play/id/72632/sid/1/nid/1.html"><img style="width:100%;height:240" src="https://i.ytimg.com/vi/KWFxfO_lpP0/maxresdefault.jpg"></a>
 	<a target="_blank" href="https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B%E5%B7%A5%E5%BB%A0">1h50m</a>
@@ -355,15 +353,15 @@ function donate(){
         <a href="http://descsir.axfree.com/food-usa-zh-cn.php" target="_blank"><font size="1" color="#29AB87">#饮食</font></a>&nbsp;
     </div>
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Immigration LEAVE Chino ------ </h3>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/OGkaPON302g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/NAvOq0T0Gs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/-Zt74MzJJM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/RtOVIDlMLzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/y1LX6FW1oRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/_5eBqildDqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/EYDpi-Za-9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OGkaPON302g/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/NAvOq0T0Gs4/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-Zt74MzJJM8/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/RtOVIDlMLzQ/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y1LX6FW1oRA/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/_5eBqildDqw/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/EYDpi-Za-9Q/maxresdefault.jpg"></div>
 
-<table style="width:100%" border="1" valign="top" halign="left">
+<table style="width:100%" border="1" valign="top">
   <tr>
     <th>永远拒绝</th>
     <th>偶尔</th> 
@@ -375,9 +373,9 @@ function donate(){
     <td>奶酪<br/>刀叉<br/>橄榄油<br/>葡萄<br/>美国<br/>鸭肉<br/>土豆<br/>玉米</td>
   </tr>
 </table>
-<div class="thumbinner" style="width:100%;"><a href="https://en.wikipedia.org/wiki/File:YouTube_world_map_May_2016_Update.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/YouTube_world_map_May_2016_Update.svg/400px-YouTube_world_map_May_2016_Update.svg.png" decoding="async" width="100%" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/YouTube_world_map_May_2016_Update.svg/600px-YouTube_world_map_May_2016_Update.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/YouTube_world_map_May_2016_Update.svg/800px-YouTube_world_map_May_2016_Update.svg.png 2x" data-file-width="2560" data-file-height="1314"></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:YouTube_world_map_May_2016_Update.svg" class="internal" title="Enlarge"></a></div><center><b>World map showing the status of YouTube blocking</b></center> <blockquote> <div>    <table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;"><tbody><tr> <td style="width: 50%;text-align: left; vertical-align: top;"> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #008000; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Has local YouTube version</div> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #B2B2B2; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Accessible</div>   </td> <td style="width: 50%;text-align: left; vertical-align: top;"> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #FF0000; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Currently blocked</div> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #FF8888; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Previously blocked</div>   </td></tr></tbody></table></div> </blockquote></div></div>
+<div class="thumbinner" style="width:100%;"><a href="https://en.wikipedia.org/wiki/File:YouTube_world_map_May_2016_Update.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/YouTube_world_map_May_2016_Update.svg/400px-YouTube_world_map_May_2016_Update.svg.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/YouTube_world_map_May_2016_Update.svg/600px-YouTube_world_map_May_2016_Update.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/YouTube_world_map_May_2016_Update.svg/800px-YouTube_world_map_May_2016_Update.svg.png 2x" data-file-width="2560" data-file-height="1314"></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:YouTube_world_map_May_2016_Update.svg" class="internal" title="Enlarge"></a></div><center><b>World map showing the status of YouTube blocking</b></center> <blockquote> <div>    <table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;"><tbody><tr> <td style="width: 50%;text-align: left; vertical-align: top;"> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #008000; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Has local YouTube version</div> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #B2B2B2; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Accessible</div>   </td> <td style="width: 50%;text-align: left; vertical-align: top;"> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #FF0000; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Currently blocked</div> <div class="legend" style="-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid-column"><span class="legend-color" style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color: #FF8888; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;Previously blocked</div>   </td></tr></tbody></table></div> </blockquote></div></div>
   <h2 style="width:100%;text-align:center;">Youtube Availability</h2>
-  <a href="https://freeimage.host/i/o2MJV9"><img width="100%" src="https://iili.io/o2MJV9.md.png" alt="o2MJV9.md.png" border="0"></a>
+  <a href="https://freeimage.host/i/o2MJV9"><img style="width:100%;" src="https://iili.io/o2MJV9.md.png" alt="o2MJV9.md.png" border="0"></a>
   <div id="container1" style="position: relative; width: 100%; max-height: 450px;"></div>
  
      
@@ -547,12 +545,12 @@ ele.innerHTML = ele.innerHTML + hrs;
 	
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Solo ------ </h3> 
 <a target="_blank" href="https://www.youtube.com/embed/rGdh1lzwykE"><img style="width:100%;height:240" src="https://gravity.co/assets/images/social/gravity-social-card.jpg"></a>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/bfe2Z7G0i0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/tnRoda7Ke2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/FHtvDA0W34I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/0WmaZhpd3hI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/GaANi96Z-Wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/L4qM1IEhtNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/bfe2Z7G0i0I/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/tnRoda7Ke2w/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/FHtvDA0W34I/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/0WmaZhpd3hI/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/GaANi96Z-Wg/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/L4qM1IEhtNQ/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Survival ------ </h3> 
 <a target="_blank" href="https://vip.liuliuyy.com/vodplay/3611-1-1.html"><img style="width:100%;height:240" src="https://japaneseculturereflectionsblog.files.wordpress.com/2017/07/rescuedawn-tp.jpeg"></a>
@@ -569,85 +567,85 @@ ele.innerHTML = ele.innerHTML + hrs;
 <a target="_blank" href="https://zh.wikipedia.org/wiki/%E8%8D%92%E9%87%8E%E7%94%9F%E5%AD%98_(%E7%94%B5%E5%BD%B1)">2h28m</a>
 <a target="_blank" href="https://www.nunuyy.cc/dianying/19818.html"><img style="width:100%;height:240" src="https://media.tenor.com/images/5e4a99ef883f5e716019fad248bdc73c/tenor.png"></a>
 <a target="_blank" href="https://zh.wikipedia.org/wiki/%E9%98%BF%E6%B3%A2%E7%BD%9713%E5%8F%B7_(%E7%94%B5%E5%BD%B1)">2h20m</a>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/leHb2hdCLqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/leHb2hdCLqo/maxresdefault.jpg"></div>
 <a target="_blank" href="https://en.wikipedia.org/wiki/Tofua">0h52m</a>
 <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_films_based_on_actual_events"><img style="width:100%;height:240" src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555922051/shape/mentalfloss/411363.jpg"></a>
 	
-<h3 style="width:100%;text-align:center;color:LightSlateGray;">------ GREAT SpacEX STARSHIP ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/yB_QrA-w6Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/65X_pT6XSLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/0qo78R_yYFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/C8JyvzU0CXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/zqE-ultsWt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/Tk338VXcb24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3 style="width:100%;text-align:center;color:LightSlateGray;">------ GREAT SpacEX STARSHIP ------ </h3>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/yB_QrA-w6Gs/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/65X_pT6XSLY/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/0qo78R_yYFA/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/C8JyvzU0CXU/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/zqE-ultsWt0/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Tk338VXcb24/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ AwesOMe Tracks ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/OlV26ouCn5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/SBiwLibZqfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/dJoXVILGeKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/p9BoEuwuzIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/sKdZuf2W2Wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OlV26ouCn5w/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/SBiwLibZqfw/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/dJoXVILGeKQ/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/p9BoEuwuzIk/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/sKdZuf2W2Wk/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Beautiful Ambient ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/vr-jtDjTaIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/nmUqrfS_59M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/l6U2qXfdk6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/cuJ9L5aBvio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/vr-jtDjTaIc/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/nmUqrfS_59M/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/l6U2qXfdk6I/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/cuJ9L5aBvio/maxresdefault.jpg"></div>
 <a target="_blank" href="https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php"><img style="width:100%;height:240" src="https://pbs.twimg.com/media/C-QF1tCXYAAw-UR.jpg"></a>
 <a target="_blank" href="https://noises.online/"><img style="width:100%;height:240" src="https://mynoise.net/Pix/FBdefault.jpg"></a>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/gpvznAiKblU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/vaqM6J1B0ag?list=PLT52k8RYVZFS01TMB1d-3rM0qzMn3e1LO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/CbdJYCYAgtk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/2R2gb0MKJlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/UuWr5TCbumI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/fvRkWO5g2HE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/gpvznAiKblU/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/vaqM6J1B0ag/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/CbdJYCYAgtk/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/2R2gb0MKJlo/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/UuWr5TCbumI/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/fvRkWO5g2HE/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Bass Boosted ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/uGJSvxIye_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/YKLX3QbKBg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/Lmui43XXVaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/JLRhBUMeXUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/qZT0K4DeAcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/QmZaOp7Fukg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/rzvFr2OihjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/uGJSvxIye_c/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/YKLX3QbKBg0/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Lmui43XXVaU/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/JLRhBUMeXUU/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/qZT0K4DeAcE/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/QmZaOp7Fukg/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/rzvFr2OihjE/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Deep Bass Test ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/M8gjsefNYpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/KaXWmV69Uyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/y8N6Z7vVu14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/iO62OyWfUY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/-TdLTe_yckY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/M8gjsefNYpE/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/KaXWmV69Uyw/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y8N6Z7vVu14/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/iO62OyWfUY0/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-TdLTe_yckY/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Workout ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/sD-tzrVZvrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/VdxDnuXj4yc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/sD-tzrVZvrY/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/VdxDnuXj4yc/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Arabic ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/v0toMJDnx-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/X8kO0cNXYOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/Kx-fIx10hAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/ZqW_5Ka0n7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/Srt8QReWCLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/v0toMJDnx-0/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/X8kO0cNXYOU/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Kx-fIx10hAI/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/ZqW_5Ka0n7g/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Srt8QReWCLM/maxresdefault.jpg"></div>
+
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Atlantis ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/60ItHLz5WEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/1-xGerv5FOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/wJnBTPUQS5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/2i2khp_npdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/M-P4QBt-FWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/Az-mGR-CehY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/IcrbM1l_BoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/UtF6Jej8yb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/uwGgN38h6qM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/60ItHLz5WEA/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/1-xGerv5FOk/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/wJnBTPUQS5A/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/2i2khp_npdE/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/M-P4QBt-FWw/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Az-mGR-CehY/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/IcrbM1l_BoI/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/UtF6Jej8yb4/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/uwGgN38h6qM/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Columbia ------ </h3> 
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/6Mgqbai3fKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/9jI-z9QN6g8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/VqEbCxg2bNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/GMFewiplIbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/t_jHrUE5IOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/zEf423kYfqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.youtube.com/embed/FzG4uDgje3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/6Mgqbai3fKo/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/9jI-z9QN6g8/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/VqEbCxg2bNI/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/GMFewiplIbw/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/t_jHrUE5IOk/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/zEf423kYfqk/maxresdefault.jpg"></div>
+<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/FzG4uDgje3M/maxresdefault.jpg"></div>
 
 <div id="brs1"></div>
 <script>
@@ -660,21 +658,21 @@ ele.innerHTML = ele.innerHTML + hrs;
 	
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Wonderful VR ------ </h3> 
 <!-- Change iframe width or height to match the player to your site -->
-<iframe width="100%" height="240" src="https://player.tnaflix.com/video/4047235" frameborder="460"></iframe>
-<img width="100%" src="https://cdn-vr.sexlikereal.com/images/16390/vr-porn-Making-it-Up-to-You-cover-app.jpg" alt="Workplace" usemap="#making-it-up-to-you">
+<iframe style="width:100%;height:240" src="https://player.tnaflix.com/video/4047235" frameborder="460"></iframe>
+<img style="width:100%;" src="https://cdn-vr.sexlikereal.com/images/16390/vr-porn-Making-it-Up-to-You-cover-app.jpg" alt="Workplace" usemap="#making-it-up-to-you">
 <map name="making-it-up-to-you">
   <area target="_blank" shape="rect" coords="0,0,350,250" alt="pay" href="https://www.sexlikereal.com/scenes/making-it-up-to-you-16390">
   <area target="_blank" shape="rect" coords="350,0,420,250" alt="play" href="https://nl.spankbang.com/4cdzc/video/i+like+her">
 </map>
-<img width="100%" src="https://adultsblog.net/wp-content/uploads/2019/04/1555547131_bubble-butt-babysitters.jpg" alt="Workplace" usemap="#my-bubble-butt-babysitter">
+<img style="width:100%;" src="https://adultsblog.net/wp-content/uploads/2019/04/1555547131_bubble-butt-babysitters.jpg" alt="Workplace" usemap="#my-bubble-butt-babysitter">
 <map name="my-bubble-butt-babysitter">
   <area target="_blank" shape="rect" coords="0,0,250,610" alt="pay" href="https://vrporn.com/my-bubble-butt-babysitter/">
   <area target="_blank" shape="rect" coords="250,0,1100,610" alt="play" href="https://www.sexlikereal.com/scenes/my-bubble-butt-babysitter-8727">
 </map>
-<iframe width="100%" height="240" src="https://www.pornhub.com/embed/ph5eb13b70b5476" frameborder="0" scrolling="no" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://www.pornhub.com/embed/ph58c5284b6f464" frameborder="0" scrolling="no" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://xhamster2.com/embed/7852830" frameborder="0"  scrolling="no" allowfullscreen></iframe>
-<iframe width="100%" height="240" src="https://xhamster2.com/embed/11450718" frameborder="0"  scrolling="no" allowfullscreen></iframe>
+<iframe style="width:100%;height:240" src="https://www.pornhub.com/embed/ph5eb13b70b5476" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe style="width:100%;height:240" src="https://www.pornhub.com/embed/ph58c5284b6f464" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe style="width:100%;height:240" src="https://xhamster2.com/embed/7852830" frameborder="0"  scrolling="no" allowfullscreen></iframe>
+<iframe style="width:100%;height:240" src="https://xhamster2.com/embed/11450718" frameborder="0"  scrolling="no" allowfullscreen></iframe>
 <a target="_blank" href="https://www.youtube.com/watch?v=OM833Xth1rw"><img style="width:100%;height:240" src="https://i.ytimg.com/vi/OM833Xth1rw/mqdefault.jpg"></a>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Amazing Comics ------ </h3> 
@@ -690,7 +688,7 @@ ele.innerHTML = ele.innerHTML + hrs;
 	<div class="top-left">donate</div>
 	-->
 </div>
-<img width="100%" height="240" src="https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/umtf0yl5hrmxyvfg_1622282725.jpeg" size="150" alt="?" onclick="donate(this)">
+<img style="width:100%;height:240" src="https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/umtf0yl5hrmxyvfg_1622282725.jpeg" alt="?" onclick="donate(this)">
 <script>
 var syms = ["BTC", "XMR"];
 var adds = ["1BLUzUkne15AVzz84thuZV7txa3ef84hEV", "86uiJtFidKp699Wqi9uERA3eTMmH9tiTbjnULfFdXEzqVsWePbyjS3M4mCkb7dotz9VM5dfZG3cskBynptVopoqeReTrM3w"];
