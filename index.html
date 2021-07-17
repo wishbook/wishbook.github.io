@@ -796,6 +796,9 @@ ele.innerHTML = ele.innerHTML + hrs;
       if (event.data==1) {
         playerb.pauseVideo();
       }
+      if (event.data==2) {
+        playerb.playVideo();
+      }
     }
     function onPlayerStateChangeB(event){
       console.log("eventb.data============="+playState(event.data));
