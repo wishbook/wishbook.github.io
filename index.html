@@ -789,7 +789,7 @@ ele.innerHTML = ele.innerHTML + hrs;
     var playb_index=0,is_play,is_buffer;
     function onPlayerReadyB(event) {
       is_play=true;
-      playNext();
+      cueNext();
     }
     function onPlayerStateChange(event) {
       console.log("event.data=============="+playState(event.data));
@@ -812,12 +812,16 @@ ele.innerHTML = ele.innerHTML + hrs;
         is_buffer=false;
         //playNext();
       }
-      if (playerb.getDuration()>240||event.data==0) {
-        playNext();
+      if (event.data==0||playerb.getDuration()>240) {
+        cueNext();
+      }
+      if (event.data==5&&playerb.getDuration()<=240) {
+        playerb.loadVideoById(imgSrcs[playb_index], 0, "default");
+        //playerb.playVideo();
       }
     }
-    function playNext() {
-      playerb.loadVideoById(imgSrcs[playb_index], 0, "default");
+    function cueNext() {
+      playerb.cueVideoById(imgSrcs[playb_index], 0, "default");
       playb_index++;
       if(playb_index==imgSrcs.length){
         playb_index=0;
