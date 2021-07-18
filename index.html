@@ -34,17 +34,6 @@ input {font:inherit}
   top: 120px;
   left: 16px;
 }
-video {
-  width: 100%    !important;
-  height: auto   !important;
-}
-iframe {
-    width: 100%;
-    height: 240px;
-}
-.container {
-    width:100%;
-}
 .column {
     width:33.33333333%;
     float:left;
@@ -52,6 +41,21 @@ iframe {
 .column a {
     width:100%;
     height:auto;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 </style>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>	
@@ -184,11 +188,11 @@ iframe {
 	<a target="_blank" href='https://zxing.org/w/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl=litecoin:LZRneXwwoPqyHGak2sXRSieZ97Td7JLLeB'>LZRneXwwoPqyHGak2sXRSieZ97Td7JLLeB</a><button onclick="copyTextToClipboard('LZRneXwwoPqyHGak2sXRSieZ97Td7JLLeB');alert('LZRneXwwoPqyHGak2sXRSieZ97Td7JLLeB\nLitecoin adress copied!!!');">Copy</button>
 	</font>
 	-->
-        <div id="ytplayerb"></div>
+        <div class="container"><div class="video" id="ytplayerb"></div></div>
 	<a target="_blank" href="https://nextshark.com/einsteins-travel-diaries-reveal-shockingly-racist-views-asians/"><img style="width:100%;height:240" src="https://cdn.statically.io/img/nextshark.com/wp-content/uploads/2018/06/einstein.png"></a>
 	<a target="_blank" href="https://warroom.org/"><img style="width:100%;height:240" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf4cTWVvisC17HB2oyionWnG1QlpNshOAv-w&usqp=CAU"></a>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/AwBXKUhEZqw/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-bD_WiU9bRs/maxresdefault.jpg"></div>
+	<div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/AwBXKUhEZqw/maxresdefault.jpg"></div>
+	<div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-bD_WiU9bRs/maxresdefault.jpg"></div>
 	<img style="width:100%;height:240" src="https://media.swncdn.com/cms/CW/faith/58093-stairs-heaven-1200.1200w.tn.jpg">
 	<a target="_blank" href="https://www.ttky8.com/vod/play/id/72632/sid/1/nid/1.html"><img style="width:100%;height:240" src="https://i.postimg.cc/Wz5hM9tL/maxresdefault.jpg"></a>
 	<a target="_blank" href="https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B%E5%B7%A5%E5%BB%A0">1h50m</a>
@@ -365,14 +369,14 @@ iframe {
         <a href="http://descsir.axfree.com/food-usa-zh-cn.php" target="_blank"><font size="1" color="#29AB87">#饮食</font></a>&nbsp;
     </div>
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Immigration LEAVE Chino ------ </h3>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OGkaPON302g/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/NAvOq0T0Gs4/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-Zt74MzJJM8/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/RtOVIDlMLzQ/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y1LX6FW1oRA/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/_5eBqildDqw/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/EYDpi-Za-9Q/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/coMpV9xpP5Q/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OGkaPON302g/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/NAvOq0T0Gs4/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-Zt74MzJJM8/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/RtOVIDlMLzQ/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y1LX6FW1oRA/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/_5eBqildDqw/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/EYDpi-Za-9Q/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/coMpV9xpP5Q/maxresdefault.jpg"></div>
 	
 <table style="width:100%" border="1" valign="top">
   <tr>
@@ -557,13 +561,13 @@ ele.innerHTML = ele.innerHTML + hrs;
 </script>
 	
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Solo ------ </h3> 
-<a target="_blank" href="https://www.youtube.com/embed/rGdh1lzwykE"><img style="width:100%;height:240" src="https://gravity.co/assets/images/social/gravity-social-card.jpg"></a>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/bfe2Z7G0i0I/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/tnRoda7Ke2w/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/FHtvDA0W34I/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/0WmaZhpd3hI/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/GaANi96Z-Wg/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/L4qM1IEhtNQ/maxresdefault.jpg"></div>
+    <a target="_blank" href="https://www.youtube.com/embed/rGdh1lzwykE"><img style="width:100%;height:240" src="https://gravity.co/assets/images/social/gravity-social-card.jpg"></a>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/bfe2Z7G0i0I/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/tnRoda7Ke2w/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/FHtvDA0W34I/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/0WmaZhpd3hI/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/GaANi96Z-Wg/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/L4qM1IEhtNQ/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Survival ------ </h3> 
 <div class="container">
@@ -596,75 +600,75 @@ ele.innerHTML = ele.innerHTML + hrs;
 </div>
 <br/><br/>
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ GREAT SpacEX STARSHIP ------ </h3>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/yB_QrA-w6Gs/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/65X_pT6XSLY/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/0qo78R_yYFA/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/C8JyvzU0CXU/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/zqE-ultsWt0/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Tk338VXcb24/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/yB_QrA-w6Gs/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/65X_pT6XSLY/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/0qo78R_yYFA/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/C8JyvzU0CXU/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/zqE-ultsWt0/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Tk338VXcb24/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ AwesOMe Tracks ------ </h3> 
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OlV26ouCn5w/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/SBiwLibZqfw/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/dJoXVILGeKQ/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/p9BoEuwuzIk/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/sKdZuf2W2Wk/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OlV26ouCn5w/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/SBiwLibZqfw/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/dJoXVILGeKQ/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/p9BoEuwuzIk/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/sKdZuf2W2Wk/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Beautiful Ambient ------ </h3> 
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/vr-jtDjTaIc/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/nmUqrfS_59M/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/l6U2qXfdk6I/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/cuJ9L5aBvio/mqdefault.jpg"></div>
-<a target="_blank" href="https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php"><img style="width:100%;height:240" src="https://pbs.twimg.com/media/C-QF1tCXYAAw-UR.jpg"></a>
-<a target="_blank" href="https://noises.online/"><img style="width:100%;height:240" src="https://mynoise.net/Pix/FBdefault.jpg"></a>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/gpvznAiKblU/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/vaqM6J1B0ag/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/CbdJYCYAgtk/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/2R2gb0MKJlo/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/UuWr5TCbumI/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/fvRkWO5g2HE/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/vr-jtDjTaIc/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/nmUqrfS_59M/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/l6U2qXfdk6I/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/cuJ9L5aBvio/mqdefault.jpg"></div>
+    <a target="_blank" href="https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php"><img style="width:100%;height:240" src="https://pbs.twimg.com/media/C-QF1tCXYAAw-UR.jpg"></a>
+    <a target="_blank" href="https://noises.online/"><img style="width:100%;height:240" src="https://mynoise.net/Pix/FBdefault.jpg"></a>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/gpvznAiKblU/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/vaqM6J1B0ag/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/CbdJYCYAgtk/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/2R2gb0MKJlo/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/UuWr5TCbumI/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/fvRkWO5g2HE/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Bass Boosted ------ </h3> 
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/uGJSvxIye_c/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/YKLX3QbKBg0/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Lmui43XXVaU/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://cdn.vox-cdn.com/thumbor/nG3R-ENEkMqEWDP9xtsiCtLNHEk=/0x0:1920x1080/1200x0/filters:focal(0x0:1920x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/11692575/darkknight_movie_screencaps.com_60.jpg?ytvid=JLRhBUMeXUU"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/qZT0K4DeAcE/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/QmZaOp7Fukg/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Cbb3scgFF5M/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/R4UDF_nyfyw/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/hrEu_1sHgI4/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/uGJSvxIye_c/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/YKLX3QbKBg0/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Lmui43XXVaU/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://cdn.vox-cdn.com/thumbor/nG3R-ENEkMqEWDP9xtsiCtLNHEk=/0x0:1920x1080/1200x0/filters:focal(0x0:1920x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/11692575/darkknight_movie_screencaps.com_60.jpg?ytvid=JLRhBUMeXUU"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/qZT0K4DeAcE/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/QmZaOp7Fukg/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Cbb3scgFF5M/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/R4UDF_nyfyw/maxresdefault.jpg"></div>
+    <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/hrEu_1sHgI4/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Workout ------ </h3> 
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/sD-tzrVZvrY/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/VdxDnuXj4yc/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/sD-tzrVZvrY/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/VdxDnuXj4yc/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Arabic ------ </h3> 
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/v0toMJDnx-0/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/X8kO0cNXYOU/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Kx-fIx10hAI/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/ZqW_5Ka0n7g/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Srt8QReWCLM/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/v0toMJDnx-0/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/X8kO0cNXYOU/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Kx-fIx10hAI/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/ZqW_5Ka0n7g/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Srt8QReWCLM/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Atlantis ------ </h3> 
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/60ItHLz5WEA/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/1-xGerv5FOk/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/wJnBTPUQS5A/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/2i2khp_npdE/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/M-P4QBt-FWw/mqdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Az-mGR-CehY/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/IcrbM1l_BoI/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/UtF6Jej8yb4/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/uwGgN38h6qM/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/60ItHLz5WEA/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/1-xGerv5FOk/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/wJnBTPUQS5A/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/2i2khp_npdE/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/M-P4QBt-FWw/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/Az-mGR-CehY/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/IcrbM1l_BoI/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/UtF6Jej8yb4/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/uwGgN38h6qM/mqdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Columbia ------ </h3> 
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/6Mgqbai3fKo/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/9jI-z9QN6g8/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/VqEbCxg2bNI/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/GMFewiplIbw/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/t_jHrUE5IOk/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/zEf423kYfqk/maxresdefault.jpg"></div>
-<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/FzG4uDgje3M/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/6Mgqbai3fKo/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/9jI-z9QN6g8/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/VqEbCxg2bNI/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/GMFewiplIbw/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/t_jHrUE5IOk/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/zEf423kYfqk/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/FzG4uDgje3M/maxresdefault.jpg"></div>
 
 <div id="brs1"></div>
 <script>
@@ -677,7 +681,7 @@ ele.innerHTML = ele.innerHTML + hrs;
 	
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Wonderful VR ------ </h3> 
 <!-- Change iframe width or height to match the player to your site -->
-<div><iframe src="https://player.tnaflix.com/video/4047235" frameborder="460"></iframe></div>
+<div class="container"><iframe class="video" src="https://player.tnaflix.com/video/4047235" frameborder="460"></iframe></div>
 <img style="width:100%;" src="https://cdn-vr.sexlikereal.com/images/16390/vr-porn-Making-it-Up-to-You-cover-app.jpg" alt="Workplace" usemap="#making-it-up-to-you">
 <map name="making-it-up-to-you">
   <area target="_blank" shape="rect" coords="0,0,350,250" alt="pay" href="https://www.sexlikereal.com/scenes/making-it-up-to-you-16390">
@@ -688,10 +692,10 @@ ele.innerHTML = ele.innerHTML + hrs;
   <area target="_blank" shape="rect" coords="0,0,250,610" alt="pay" href="https://vrporn.com/my-bubble-butt-babysitter/">
   <area target="_blank" shape="rect" coords="250,0,1100,610" alt="play" href="https://www.sexlikereal.com/scenes/my-bubble-butt-babysitter-8727">
 </map>
-<div><iframe src="https://www.pornhub.com/embed/ph5eb13b70b5476" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-<div><iframe src="https://www.pornhub.com/embed/ph58c5284b6f464" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-<div><iframe src="https://xhamster2.com/embed/7852830" frameborder="0"  scrolling="no" allowfullscreen></iframe></div>
-<div><iframe src="https://xhamster2.com/embed/11450718" frameborder="0"  scrolling="no" allowfullscreen></iframe></div>
+<div class="container"><iframe class="video" src="https://www.pornhub.com/embed/ph5eb13b70b5476" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+<div class="container"><iframe class="video" src="https://www.pornhub.com/embed/ph58c5284b6f464" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+<div class="container"><iframe class="video" src="https://xhamster2.com/embed/7852830" frameborder="0"  scrolling="no" allowfullscreen></iframe></div>
+<div class="container"><iframe class="video" src="https://xhamster2.com/embed/11450718" frameborder="0"  scrolling="no" allowfullscreen></iframe></div>
 <div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OM833Xth1rw/mqdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Amazing Comics ------ </h3> 
@@ -727,12 +731,12 @@ ele.innerHTML = ele.innerHTML + hrs;
 </script>
 	
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Deep Bass Test ------ </h3> 
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.postimg.cc/d3XsDDgG/c56086ce8ccc20a6b9e4dc75528e3fe3.jpg?ytvid=M8gjsefNYpE"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/KaXWmV69Uyw/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y8N6Z7vVu14/mqdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/iO62OyWfUY0/maxresdefault.jpg"></div>
-	<div><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-TdLTe_yckY/maxresdefault.jpg"></div>
-<div id="ytplayera"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.postimg.cc/d3XsDDgG/c56086ce8ccc20a6b9e4dc75528e3fe3.jpg?ytvid=M8gjsefNYpE"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/KaXWmV69Uyw/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y8N6Z7vVu14/mqdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/iO62OyWfUY0/maxresdefault.jpg"></div>
+    <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-TdLTe_yckY/maxresdefault.jpg"></div>
+<div class="container"><div id="ytplayera" class="video"></div></div>
 <script>
     var imgs = document.getElementsByTagName("img");
     var imgSrcs = [],imgsrc;
@@ -763,8 +767,6 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onYouTubeIframeAPIReady() {
       console.log("onYouTubeIframeAPIReady()=======================");
       ytPlayerB= new YT.Player('ytplayerb', {
-        height: 'auto',
-        width: '100%',
         events: {
           'onReady': onPlayerReadyB,
           'onStateChange': onPlayerStateChangeB
@@ -774,8 +776,6 @@ ele.innerHTML = ele.innerHTML + hrs;
     }
     function newYTPlayerA() {
       ytPlayerA= new YT.Player('ytplayera', {
-        height: 'auto',
-        width: '100%',
         events: {
           'onReady': onPlayerReadyA,
           'onStateChange': onPlayerStateChangeA
@@ -864,7 +864,6 @@ ele.innerHTML = ele.innerHTML + hrs;
         else
             ytVideoId=url.substring(23,34);
         ele.style.display = "none";
-        //ytPlayerB.pauseVideo();
         ele.parentNode.appendChild(document.getElementById('ytplayera'));
         ytPlayerA.destroy();
         newYTPlayerA();
