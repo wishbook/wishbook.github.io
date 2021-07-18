@@ -812,10 +812,10 @@ ele.innerHTML = ele.innerHTML + hrs;
         is_buffer=false;
         //playNext();
       }
-      if (event.data==0||playerb.getDuration()>240) {
+      if (event.data==0||playerb.getDuration()>540) {
         cueNext();
       }
-      if (event.data==5&&playerb.getDuration()<=240) {
+      if (event.data==5&&playerb.getDuration()<=540) {
         //playerb.loadVideoById(imgSrcs[playb_index], 0, "default");
         playerb.playVideo();
       }
