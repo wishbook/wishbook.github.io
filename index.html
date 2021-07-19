@@ -740,7 +740,7 @@ ele.innerHTML = ele.innerHTML + hrs;
     <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/y8N6Z7vVu14/mqdefault.jpg"></div>
     <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/iO62OyWfUY0/maxresdefault.jpg"></div>
     <div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/-TdLTe_yckY/maxresdefault.jpg"></div>
-<div class="container"><div id="ytplayera" class="video"></div></div>
+<div id="ytplayerac" class="container"><div id="ytplayera" class="video"></div></div>
 <script>
     var imgs = document.getElementsByTagName("img");
     var imgSrcs = [],imgsrc;
@@ -857,7 +857,8 @@ ele.innerHTML = ele.innerHTML + hrs;
                 v.src = str;
                 if(imgs.length>0){
                     imgs[0].style.display = "";
-                    //v.parentNode.removeChild(v);
+                    if(!str.includes('youtube.com'))
+                        v.parentNode.removeChild(v);
                 }
             }
             });
@@ -882,7 +883,9 @@ ele.innerHTML = ele.innerHTML + hrs;
                 v.src = str;
                 if(imgs.length>0){
                     imgs[0].style.display = "";
-                    if(v.id!="ytplayera")
+                    if(v.id=="ytplayera")
+                        v.style.display = "none";
+                    else
                         v.parentNode.removeChild(v);
                 }
             }
