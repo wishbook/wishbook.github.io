@@ -681,7 +681,7 @@ ele.innerHTML = ele.innerHTML + hrs;
 	
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Wonderful VR ------ </h3> 
 <!-- Change iframe width or height to match the player to your site -->
-<div class="container"><iframe class="video" src="https://player.tnaflix.com/video/4047235" frameborder="460"></iframe></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'yon7kc');" src="https://img.tnastatic.com/a7:4q80w375r/thumbs/b3/8_4047235l.jpg"></div>
 <img style="width:100%;" src="https://cdn-vr.sexlikereal.com/images/16390/vr-porn-Making-it-Up-to-You-cover-app.jpg" alt="Workplace" usemap="#making-it-up-to-you">
 <map name="making-it-up-to-you">
   <area target="_blank" shape="rect" coords="0,0,350,250" alt="pay" href="https://www.sexlikereal.com/scenes/making-it-up-to-you-16390">
@@ -692,11 +692,15 @@ ele.innerHTML = ele.innerHTML + hrs;
   <area target="_blank" shape="rect" coords="0,0,250,610" alt="pay" href="https://vrporn.com/my-bubble-butt-babysitter/">
   <area target="_blank" shape="rect" coords="250,0,1100,610" alt="play" href="https://www.sexlikereal.com/scenes/my-bubble-butt-babysitter-8727">
 </map>
-<div class="container"><iframe class="video" src="https://www.pornhub.com/embed/ph5eb13b70b5476" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-<div class="container"><iframe class="video" src="https://www.pornhub.com/embed/ph58c5284b6f464" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-<div class="container"><iframe class="video" src="https://xhamster2.com/embed/7852830" frameborder="0"  scrolling="no" allowfullscreen></iframe></div>
-<div class="container"><iframe class="video" src="https://xhamster2.com/embed/11450718" frameborder="0"  scrolling="no" allowfullscreen></iframe></div>
-<div class="container"><img style="width:100%;height:240" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OM833Xth1rw/mqdefault.jpg"></div>
+<div class="container"><a target="_blank" href="https://www.sexlikereal.com/scenes/naughty-dorm-party-spanish-lullaby-17120"><img class="video" src="https://pbs.twimg.com/media/ElRjUPXXIAcAuRj.jpg:large"></a></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'ph5eb13b70b5476');" src="https://di.phncdn.com/videos/202005/05/310501021/original/(m=qHN1IRVbeaAaGwObaaaa)(mh=_keJKnqCK7iFegft)0.jpg"></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'ph58c5284b6f464');" src="https://ei.phncdn.com/videos/201703/12/109371462/original/(m=qK-W76UbeaAaGwObaaaa)(mh=WM9JX0j70WO_yxL2)0.jpg"></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'ph5d4deaaca10dd');" src="https://ei.phncdn.com/videos/201908/09/240708471/original/(m=q1I-70UbeaAaGwObaaaa)(mh=TdNoIBm6J8v8kb_a)0.jpg"></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'7852830');"  src="https://thumb-lvlt.xhcdn.com/a/nTYZ4BH8YebR6HIyJwOZ_g/007/852/830/1280x720.11.jpg"></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'11450718');" src="https://thumb-lvlt.xhcdn.com/a/qs5YpIPzKWRHi3GXcamwIg/011/450/718/1280x720.c.jpg.v1555604348"></div>
+<div class="container"><img class="video" onclick="javascript:embedpn(this,'20439377');" src="https://thumb-lvlt.xhcdn.com/a/t4geYWFPqVAugHHFiEtcRQ/020/439/377/1280x720.c.jpg.v1625251980"></div>
+<div class="container"><img class="video" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/OM833Xth1rw/mqdefault.jpg"></div>
+<div class="container"><img class="video" onclick="javascript:embedyt(this,0);" src="https://i.ytimg.com/vi/n220tf_zPTw/maxresdefault.jpg"></div>
 
 <h3 style="width:100%;text-align:center;color:LightSlateGray;">------ Amazing Comics ------ </h3> 
 <a target="_blank" href="https://allporncomic.com/porncomic-genre/3d/"><img style="width:100%;height:240" src="http://xyzcomics.com/wp-content/uploads/2019/12/y3df_-_the_bad_tan_5_-_22.jpg"></a>
@@ -868,6 +872,33 @@ ele.innerHTML = ele.innerHTML + hrs;
         ytPlayerA.destroy();
         newYTPlayerA();
         //ele.parentNode.innerHTML+="<iframe id='ytplayera' width='100%' height='240' src='https://www.youtube.com/embed/"+vid+"?autoplay=1&start="+start+"' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+    }
+    function embedpn(ele,vid){
+        document.querySelectorAll('iframe').forEach(v => { 
+            if(v.id!="ytplayerb"){
+                var imgs = v.parentNode.querySelectorAll("img");
+                let str= v.src; 
+                str=str.replace('autoplay=1', 'autoplay=0'); 
+                v.src = str;
+                if(imgs.length>0){
+                    imgs[0].style.display = "";
+                    if(v.id!="ytplayera")
+                        v.parentNode.removeChild(v);
+                }
+            }
+            });
+        //document.querySelectorAll('video').forEach(v => { v.pause() });
+        var url=ele.src;
+        ytPlayerB.pauseVideo();
+        if(url.includes('phncdn.com'))
+            ele.parentNode.innerHTML+="<iframe class='video' src='https://www.pornhub.com/embed/"+vid+"?autoplay=1' frameborder='0' scrolling='no' allowfullscreen allow='autoplay'></iframe>";
+        else
+        if(url.includes('xhcdn.com'))
+            ele.parentNode.innerHTML+="<iframe class='video' src='https://xhamster.com/embed/"   +vid+"?autoplay=1' frameborder='0' scrolling='no' allowfullscreen allow='autoplay'></iframe>";
+        else
+        if(url.includes('tnastatic.com'))
+            ele.parentNode.innerHTML+="<iframe class='video' src='https://streamable.com/e/"     +vid+"?autoplay=1' frameborder='0'                allowfullscreen allow='autoplay'></iframe>";
+        ele.style.display = "none";
     }
 </script>
 </body>
