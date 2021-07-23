@@ -803,7 +803,7 @@ ele.innerHTML = ele.innerHTML + hrs;
       if (event.data==YT.PlayerState.PLAYING) {
         ytPlayerB.pauseVideo();
       }
-      if (event.data==YT.PlayerState.PAUSED||event.data==YT.PlayerState.ENDED) {
+      if (event.data==YT.PlayerState.ENDED) {
         ytPlayerB.playVideo();
       }
       if (event.data==YT.PlayerState.CUED) {
