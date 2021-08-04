@@ -776,7 +776,8 @@ ele.innerHTML = ele.innerHTML + hrs;
             {
                 listType: 'playlist',
                 list: 'PL2140A0411C65DD13',
-                index: 0
+                index: 0,
+		autoplay: 1
             },
         events: {
           'onReady': onPlayerReadyB,
@@ -797,16 +798,12 @@ ele.innerHTML = ele.innerHTML + hrs;
       console.log("onPlayerReadyA(event)======="+ytVideoId);
       ytPlayerA.cueVideoById(ytVideoId, ytStart, "default");
     }
-    var playb_index=0;
+    var playb_index=0,firstLoad=true;
     function onPlayerReadyB(event) {
       console.log("onPlayerReadyB(event)======================="+ytVideoId);
       //cueNext();
-      //ytPlayerB.cuePlaylist("PL2140A0411C65DD13",0,0,"default");
-      ytPlayerB.playVideoAt(0);
-      setTimeout( function() { 
-        event.target.setShuffle(true); 
-        event.target.setLoop(true);
-      }, 1000);
+      event.target.setShuffle(true); 
+      event.target.setLoop(true);
     }
     function onPlayerStateChangeA(event) {
       console.log("onPlayerStateChangeA(event)======="+playState(event.data));
@@ -823,6 +820,10 @@ ele.innerHTML = ele.innerHTML + hrs;
     }
     function onPlayerStateChangeB(event){
       console.log("onPlayerStateChangeB(event)======================="+playState(event.data));
+      if(firstLoad&&ytPlayerB.getPlaylistIndex()!=0){
+        firstLoad=false;
+        ytPlayerB.nextVideo();
+      }
       if (event.data==YT.PlayerState.PLAYING) {
         ytPlayerA.pauseVideo();
         pauseOther();
