@@ -823,9 +823,9 @@ ele.innerHTML = ele.innerHTML + hrs;
       console.log("onPlayerStateChangeB(event)======================="+playState(event.data));
       logPlaylistB();
       if(firstLoad&&ytPlayerB.getPlaylistIndex()!=0){
-        firstLoad=false;
         ytPlayerB.nextVideo();
       }
+      firstLoad=false;
       if (event.data==YT.PlayerState.PLAYING) {
         ytPlayerA.pauseVideo();
         pauseOther();
