@@ -790,13 +790,12 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onPlayerReadyA(event) {
       console.log("onPlayerReadyA(event)======="+ytVideoId);
       ytPlayerA.cueVideoById(ytVideoId, ytStart, "default");
-      //event.target.playVideo();
     }
-    var playb_index=0,is_play,is_buffer;
+    var playb_index=0;
     function onPlayerReadyB(event) {
       console.log("onPlayerReadyB(event)======================="+ytVideoId);
-      is_play=true;
-      cueNext();
+      //cueNext();
+      ytPlayerB.cuePlaylist("PL2140A0411C65DD13",0,0,"default");
     }
     function onPlayerStateChangeA(event) {
       console.log("onPlayerStateChangeA(event)======="+playState(event.data));
@@ -817,17 +816,12 @@ ele.innerHTML = ele.innerHTML + hrs;
         ytPlayerA.pauseVideo();
         pauseOther();
       }
-      if (event.data==YT.PlayerState.BUFFERING) {
-        is_buffer=true;
-      }
-      if (is_buffer&&event.data==-1) {
-        is_buffer=false;
-      }
       if (event.data==YT.PlayerState.ENDED||ytPlayerB.getDuration()>540) {
         cueNext();
       }
-      if (event.data==YT.PlayerState.CUED&&ytPlayerB.getDuration()<=540) {
-        ytPlayerB.playVideo();
+      if (event.data==YT.PlayerState.CUED) {
+        //if (ytPlayerB.getDuration()<=540)
+            ytPlayerB.playVideo();
       }
     }
     function cueNext() {
