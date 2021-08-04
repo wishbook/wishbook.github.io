@@ -804,6 +804,7 @@ ele.innerHTML = ele.innerHTML + hrs;
       //cueNext();
       event.target.setShuffle(true); 
       event.target.setLoop(true);
+	ytPlayerB.playVideo();
     }
     function onPlayerStateChangeA(event) {
       console.log("onPlayerStateChangeA(event)======="+playState(event.data));
