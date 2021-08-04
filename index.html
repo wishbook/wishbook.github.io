@@ -820,6 +820,7 @@ ele.innerHTML = ele.innerHTML + hrs;
     }
     function onPlayerStateChangeB(event){
       console.log("onPlayerStateChangeB(event)======================="+playState(event.data));
+      logPlaylistB();
       if(firstLoad&&ytPlayerB.getPlaylistIndex()!=0){
         firstLoad=false;
         ytPlayerB.nextVideo();
@@ -843,6 +844,14 @@ ele.innerHTML = ele.innerHTML + hrs;
         playb_index=0;
         shuffle(imgSrcs);
       }
+    }
+    function logPlaylistB() {
+      console.log("ytPlayerB.getPlaylistIndex()==============="+ytPlayerB.getPlaylistIndex());
+      /*
+      var playlistArray = ytPlayerB.getPlaylist();
+      for (var i = 0; i < playlistArray.length; i++) {
+        console.log("ytPlayerB.getPlaylist()["+i+"]======================="+playlistArray[i]);
+      }*/
     }
     function playState(code) {
       switch(code){
