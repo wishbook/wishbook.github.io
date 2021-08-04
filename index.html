@@ -772,6 +772,12 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onYouTubeIframeAPIReady() {
       console.log("onYouTubeIframeAPIReady()=======================");
       ytPlayerB= new YT.Player('ytplayerb', {
+        playerVars:
+            {
+                listType: 'playlist',
+                list: 'PL2140A0411C65DD13',
+                index: 0
+            },
         events: {
           'onReady': onPlayerReadyB,
           'onStateChange': onPlayerStateChangeB
@@ -795,7 +801,8 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onPlayerReadyB(event) {
       console.log("onPlayerReadyB(event)======================="+ytVideoId);
       //cueNext();
-      ytPlayerB.cuePlaylist("PL2140A0411C65DD13",0,0,"default");
+      //ytPlayerB.cuePlaylist("PL2140A0411C65DD13",0,0,"default");
+      //ytPlayerB.playVideo();
     }
     function onPlayerStateChangeA(event) {
       console.log("onPlayerStateChangeA(event)======="+playState(event.data));
