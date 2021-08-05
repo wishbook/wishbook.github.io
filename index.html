@@ -816,7 +816,7 @@ ele.innerHTML = ele.innerHTML + hrs;
         ytPlayerB.playVideo();
       }
       if (event.data==YT.PlayerState.CUED) {
-        ytPlayerA.mute();
+        ytPlayerA.unMute();
         if(ytVideoId!='MQFmSnG5Ets')
             ytPlayerA.playVideo();
       }
