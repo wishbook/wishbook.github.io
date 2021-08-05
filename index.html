@@ -810,13 +810,13 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onPlayerStateChangeA(event) {
       console.log("onPlayerStateChangeA(event)======="+playState(event.data));
       if (event.data==YT.PlayerState.PLAYING) {
+	ytPlayerA.unMute();
         ytPlayerB.pauseVideo();
       }
       if (event.data==YT.PlayerState.ENDED) {
         ytPlayerB.playVideo();
       }
       if (event.data==YT.PlayerState.CUED) {
-        ytPlayerA.unMute();
         if(ytVideoId!='MQFmSnG5Ets')
             ytPlayerA.playVideo();
       }
