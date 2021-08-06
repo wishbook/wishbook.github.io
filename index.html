@@ -796,7 +796,7 @@ ele.innerHTML = ele.innerHTML + hrs;
     }
     function onPlayerReadyA(event) {
       console.log("onPlayerReadyA(event)======="+ytVideoId);
-      ytPlayerA.mute();
+      //ytPlayerA.mute();
       ytPlayerA.cueVideoById(ytVideoId, ytStart, "default");
     }
     var playb_index=0,firstLoad=true;
@@ -810,7 +810,7 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onPlayerStateChangeA(event) {
       console.log("onPlayerStateChangeA(event)======="+playState(event.data));
       if (event.data==YT.PlayerState.PLAYING) {
-	ytPlayerA.unMute();
+	//ytPlayerA.unMute();
         ytPlayerB.pauseVideo();
       }
       if (event.data==YT.PlayerState.ENDED) {
