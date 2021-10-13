@@ -1884,7 +1884,8 @@ ele.innerHTML = ele.innerHTML + hrs;
         playerVars:
             {
                 listType: 'playlist',
-                list: 'PLArTyEAuGUl4XTZXNA6vlA7AtnMQJ_dK5',
+                list: 'PLGfS7Yd6un-lGqKtWzEYOPr_RUCPv6Ai7',
+		//list: 'PLArTyEAuGUl4XTZXNA6vlA7AtnMQJ_dK5',
                 index: 0,
                 autoplay: 1
             },
@@ -1912,7 +1913,7 @@ ele.innerHTML = ele.innerHTML + hrs;
     function onPlayerReadyB(event) {
       console.log("onPlayerReadyB(event)======================="+ytVideoId);
       //cueNext();
-      //event.target.setShuffle(true); 
+      event.target.setShuffle(true); 
       event.target.setLoop(true);
       ytPlayerB.playVideo();
     }
